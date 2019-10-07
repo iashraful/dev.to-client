@@ -1,14 +1,14 @@
 import React from 'react'
 import ArticleList from '../article/ArticleList';
 
-export default class LandingPage extends React.Component {
+export default class AllPosts extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             articles: undefined
         }
     }
-    
+
     getArticles(username='ashraful') {
         fetch('https://dev.to/api/articles/?username=' + username).then((response) => {
             return response.json()
@@ -25,8 +25,6 @@ export default class LandingPage extends React.Component {
     render() {
         return (
             <div className="container">
-                <h1 className="title has-text-centered">New Posts</h1>
-                <hr/>
                 <ArticleList articles={this.state.articles}/>
             </div>
         )

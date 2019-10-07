@@ -18,7 +18,9 @@ export default class RouterView extends React.Component {
         return (
             <Router>
                 <TopNavMenu items={this.state.routes}/>
-                {definedRoutes}
+                <div style={{marginTop: '4rem'}}>
+                    {definedRoutes}
+                </div>
             </Router>
         )
     }
