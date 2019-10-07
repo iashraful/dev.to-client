@@ -24,7 +24,7 @@ export default class AllPosts extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container blog-container">
                 <ArticleList articles={this.state.articles}/>
             </div>
         )

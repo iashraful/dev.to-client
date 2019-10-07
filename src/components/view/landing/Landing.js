@@ -24,7 +24,7 @@ export default class LandingPage extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container blog-container">
                 <h1 className="title has-text-centered">New Posts</h1>
                 <hr/>
                 <ArticleList articles={this.state.articles}/>
