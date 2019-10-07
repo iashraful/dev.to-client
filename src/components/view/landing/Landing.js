@@ -1,30 +1,31 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown'
+import ArticleList from '../article/ArticleList';
 
 export default class LandingPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            article: {}
+            articles: undefined
         }
     }
-    getAnArticle(id=89784) {
-        fetch('https://dev.to/api/articles/' + id).then((response) => {
+    
+    getArticles(username='ashraful') {
+        fetch('https://dev.to/api/articles/?username=' + username).then((response) => {
             return response.json()
-        }).then((article) => {
-            this.setState({article: article})
+        }).then((articles) => {
+            this.setState({articles: articles})
+            // console.log(this.state.articles)
         })
     }
 
+    async componentDidMount() {
+        await this.getArticles();
+    }
+
     render() {
-        this.getAnArticle();
         return (
             <div className="container">
-                <h2>Landing page</h2>
-                <hr/>
-                <ReactMarkdown source={
-                    this.state.article.body_markdown
-                }/>
+                <ArticleList articles={this.state.articles}/>
             </div>
         )
     }
