@@ -6,7 +6,13 @@
 </template>
 <script>
   import TopNavBar from "./components/TopNavBar";
+  import services from '@/utils/services'
+
   export default {
-    components: {TopNavBar}
+    components: {TopNavBar},
+    created() {
+      // Loading all the initial data while creating the vue instance
+      services.loadInitialData(this.$store)
+    }
   }
 </script>

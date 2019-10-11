@@ -3,7 +3,7 @@
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <!-- TODO: Here the name will be dynamic from API data.-->
-                Life for coding
+                {{ userConfig.blog_title }}
             </b-navbar-item>
         </template>
         <template slot="start">
@@ -28,7 +28,12 @@
         name: "TopNavBar",
         data() {
             return {
-                urls: urls
+                urls: urls,
+            }
+        },
+        computed: {
+            userConfig() {
+                return this.$store.getters.getUserConfig
             }
         }
     }
