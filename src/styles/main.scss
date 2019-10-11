@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+// Light navbar customization
+.is-light {
+  .navbar-item {
+    font-weight: 500;
+  }
+}
+
+// Dark navbar customization
+.is-dark {
+  background-color: $DIM_DARK !important;
+
+  .navbar-item {
+    font-weight: 500;
+  }
+}

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import {urls} from './constants'
 import Home from './views/Home.vue'
 import PostListView from "./views/PostListView";
 
@@ -14,7 +15,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/posts',
+      path: urls.postList,
       name: 'posts',
       component: PostListView
     },
