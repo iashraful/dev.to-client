@@ -33,7 +33,11 @@ const actions = {
     }
 };
 
-const getters = {};
+const getters = {
+    getAllPublishedPosts(state) {
+        return state.posts
+    },
+};
 
 export default {
     state,
