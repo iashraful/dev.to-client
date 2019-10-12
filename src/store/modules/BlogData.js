@@ -24,7 +24,7 @@ const actions = {
             })
     },
     async getEachPost(context, payload) {
-        return await fetch(dev_to.api + 'articles' + payload.id)
+        return await fetch(dev_to.api + 'articles/' + payload.id)
             .then((response) => {
                 return response.json()
             }).then((posts) => {
