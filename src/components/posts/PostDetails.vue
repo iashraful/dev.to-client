@@ -30,6 +30,9 @@
                 return postUtils.markdownParser(md)
             }
         },
+        mounted() {
+            document.title = this.post.title
+        },
         computed: {
             userConfig() {
                 return this.$store.getters.getUserConfig
