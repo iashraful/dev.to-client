@@ -8,6 +8,7 @@ import PostDetailsView from "@/views/posts/PostDetailsView";
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

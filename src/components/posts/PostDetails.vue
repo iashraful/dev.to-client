@@ -8,6 +8,8 @@
         <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
         <vue-disqus
                 class="comments"
+                :title="post.title"
+                :identifier="post.id"
                 :shortname="userConfig.disqus_shortname">
         </vue-disqus>
     </div>
