@@ -4,12 +4,14 @@ import router from './router'
 import store from './store/index'
 import './registerServiceWorker'
 import Buefy from 'buefy'
+import VueDisqus from 'vue-disqus'
 import 'buefy/dist/buefy.css'
 import './styles/main.scss'
 
 import userConfig from '@/utils/user-config-parser'
 
 Vue.use(Buefy);
+Vue.use(VueDisqus);
 
 Vue.config.productionTip = false;
 

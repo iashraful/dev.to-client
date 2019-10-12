@@ -6,6 +6,10 @@
             <img :src="post.cover_image">
         </figure>
         <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
+        <vue-disqus
+                class="comments"
+                :shortname="userConfig.disqus_shortname">
+        </vue-disqus>
     </div>
 </template>
 
@@ -26,6 +30,11 @@
                 return postUtils.markdownParser(md)
             }
         },
+        computed: {
+            userConfig() {
+                return this.$store.getters.getUserConfig
+            }
+        }
     }
 </script>
 
