@@ -1,0 +1,11 @@
+@media (max-width: $BREAKPOINT_TABLET) {
+  .container {
+    margin: 0 2%;
+  }
+
+  .navbar {
+    .container {
+      margin: 0;
+    }
+  }
+}

@@ -1,23 +1,29 @@
 <template>
     <div>
-        <figure class="image">
+        <p class="title has-text-centered is-4">{{ post.title }}</p>
+        <figure class="image is-4by2">
             <img :src="post.cover_image">
         </figure>
-        <p class="title has-text-centered is-4">{{ post.title }}</p>
         <p>
-            <vue-markdown>{{ post.body_markdown }}</vue-markdown>
+            <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
         </p>
     </div>
 </template>
 
 <script>
     import VueMarkdown from 'vue-markdown'
+    import postUtils from '@/utils/posts'
 
     export default {
         name: "PostDetails",
         props: ['post'],
         components: {
             VueMarkdown
+        },
+        methods: {
+            getPostBody(md) {
+                return postUtils.markdownParser(md)
+            }
         }
     }
 </script>

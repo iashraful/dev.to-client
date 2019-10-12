@@ -1,6 +1,6 @@
 {
-  "name": "My Dev.to",
-  "short_name": "Dev.to based blogging platform.",
+  "name": "dev.to backend based blogging platform.",
+  "short_name": "Ashraful's Blog",
   "icons": [
     {
       "src": "./logo.png",

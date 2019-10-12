@@ -1,5 +1,5 @@
 <template>
-    <b-navbar :fixed-top="true" type="is-dark">
+    <b-navbar :fixed-top="true" type="is-dark" wrapper-class="container">
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <!-- TODO: Here the name will be dynamic from API data.-->

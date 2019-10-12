@@ -24,8 +24,13 @@
             }
         },
         mounted() {
-            if (this.currentPost) {
+            if(this.currentPost) {
                 this.getPostFromApi()
+            } else {
+                this.post = {
+                    title: 'No Post found',
+                    body_markdown: ''
+                }
             }
         },
         methods: {

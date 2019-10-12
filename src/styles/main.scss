@@ -1,4 +1,5 @@
 @import "./variables.scss";
+@import "./responsive.scss";
 
 // Light navbar customization
 .is-light {
@@ -16,7 +17,16 @@
   }
 }
 
-
 .height-100 {
   height: 100%;
+}
+
+.post-time {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background-color: $DIM_DARK;
+  color: $PURE_WHITE;
+  padding: 2px 4px;
+  border-radius: 1px;
 }
