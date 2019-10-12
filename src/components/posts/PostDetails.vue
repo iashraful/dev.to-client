@@ -5,9 +5,7 @@
         <figure class="image is-4by2">
             <img :src="post.cover_image">
         </figure>
-        <p>
-            <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
-        </p>
+        <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
     </div>
 </template>
 
@@ -27,7 +25,7 @@
             getPostBody(md) {
                 return postUtils.markdownParser(md)
             }
-        }
+        },
     }
 </script>
 

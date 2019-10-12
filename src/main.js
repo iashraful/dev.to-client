@@ -7,12 +7,14 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 import './styles/main.scss'
 
+import userConfig from '@/utils/user-config-parser'
+
 Vue.use(Buefy);
 
 Vue.config.productionTip = false;
 
 router.beforeEach((to, from, next) => {
-    document.title = to.name;
+    document.title = userConfig.getUserDataConfig().blog_title;
     next()
 });
 
