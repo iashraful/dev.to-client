@@ -24,14 +24,15 @@
             }
         },
         mounted() {
-            if(this.currentPost) {
-                this.getPostFromApi()
-            } else {
-                this.post = {
-                    title: 'No Post found',
-                    body_markdown: ''
+            this.getPostFromApi();
+            setTimeout(() => {
+                if (!this.post) {
+                    this.post = {
+                        title: 'Sorry!! No post found.',
+                        body_markdown: ''
+                    }
                 }
-            }
+            }, 7000)
         },
         methods: {
             getPostFromApi() {
