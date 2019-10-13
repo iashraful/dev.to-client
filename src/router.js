@@ -18,12 +18,12 @@ export default new Router({
     {
       path: urls.postList,
       name: 'posts',
-      component: PostListView
+      component: () => import('@/views/posts/PostListView.vue')
     },
     {
       path: urls.postList + '/:slug',
       name: 'post_details',
-      component: PostDetailsView
+      component: () => import('@/views/posts/PostDetailsView.vue')
     },
   ]
 })

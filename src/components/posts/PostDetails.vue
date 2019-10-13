@@ -9,7 +9,7 @@
         <vue-disqus
                 class="comments"
                 :title="post.title"
-                :identifier="post.id"
+                :identifier="post.slug"
                 :shortname="userConfig.disqus_shortname">
         </vue-disqus>
     </div>

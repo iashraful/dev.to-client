@@ -16,7 +16,7 @@ const mutations = {
 
 const actions = {
     async getAllPosts(context) {
-        await fetch(dev_to.api + 'articles?username=' + _userConfig.dev__to_username)
+        await fetch(dev_to.api + 'articles?state=all&username=' + _userConfig.dev__to_username)
             .then((response) => {
                 return response.json()
             }).then((posts) => {
@@ -36,6 +36,12 @@ const actions = {
 const getters = {
     getAllPublishedPosts(state) {
         return state.posts
+    },
+    getLatestTwoPosts(state) {
+        return state.posts.slice(0, 2)
+    },
+    getSecondLatestThreePosts(state) {
+        return state.posts.slice(2, 5)
     },
 };
 

@@ -1,14 +1,16 @@
 <template>
-  <div class="home">
-    <h1 class="has-text-centered title is-4">I am working on it.</h1>
-    <img
-            style="display: block; margin-left: auto; margin-right: auto; width: 40%;"
-            src="https://ds2softwares.com/maintenance-gif.gif"/>
-  </div>
+    <div class="home">
+<!--      <latest-five-post/>-->
+      <h1>Working ....</h1>
+    </div>
 </template>
 
 <script>
-export default {
-    name: 'home',
-}
+    import PostList from "@/components/posts/PostList";
+    import LatestFivePost from "@/components/landing/LatestFivePost";
+
+    export default {
+        name: 'home',
+        components: {LatestFivePost, PostList},
+    }
 </script>
