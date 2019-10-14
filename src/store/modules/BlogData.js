@@ -38,6 +38,11 @@ const getters = {
     getAllPublishedPosts(state) {
         return state.posts
     },
+    getPostsByTag: state => (tag) => {
+        return state.posts.filter((item) => {
+            return item.tag_list.find((t) => t === tag)
+        })
+    },
     getLatestTwoPosts(state) {
         return state.posts.slice(0, 5)
     }
