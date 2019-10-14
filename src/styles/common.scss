@@ -30,8 +30,13 @@
   }
   
   .home {
-    margin-top: 2%;
     .fixed-right {
       position: fixed;
     }
+  }
+
+  .page-header {
+    padding: 4% 0;
+    background-color: #e8e8e8;
+    margin-bottom: .5rem;
   }

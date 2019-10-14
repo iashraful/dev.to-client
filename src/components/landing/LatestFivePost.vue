@@ -3,12 +3,12 @@
         <div class="columns is-multiline is-mobile">
             <div
                     class="column is-full-desktop is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="firstTwoPosts[0]"/>
+                <post-item :post="firstTwoPosts[1]"/>
             </div>
 
             <div
                     class="column is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="firstTwoPosts[1]"/>
+                <post-item :post="firstTwoPosts[0]"/>
             </div>
             <div
                     class="column is-half-tablet is-full-mobile is-fullheight">
