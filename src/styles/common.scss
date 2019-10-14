@@ -1,0 +1,36 @@
+
+// Light navbar customization
+.is-light {
+    .navbar-item {
+      font-weight: 500;
+    }
+  }
+  
+  // Dark navbar customization
+  .is-dark {
+    background-color: $DIM_DARK !important;
+  
+    .navbar-item {
+      font-weight: 500;
+    }
+  }
+  
+  .height-100 {
+    height: 100%;
+  }
+  
+  .post-time {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    background-color: $DIM_DARK;
+    color: $PURE_WHITE;
+    padding: 2px 4px;
+    border-radius: 1px;
+  }
+  
+  .home {
+    .fixed-right {
+      position: fixed;
+    }
+  }

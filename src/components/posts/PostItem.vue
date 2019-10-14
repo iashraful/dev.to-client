@@ -1,5 +1,5 @@
 <template>
-    <div class="card height-100">
+    <div class="card height-100" v-if="post">
         <div class="card-image">
             <router-link :to="{path: urls.postList + '/' + post.slug}">
                 <figure class="image is-4by2">
