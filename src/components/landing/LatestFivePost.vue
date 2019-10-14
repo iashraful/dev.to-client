@@ -1,7 +1,7 @@
 <template>
     <div>
-        <b-loading :is-full-page="true" :active.sync="latestFivePosts.length === 0" :can-cancel="false"></b-loading>
-        <div class="columns is-multiline is-mobile">
+        <b-loading :is-full-page="true" :active.sync="isLoading" :can-cancel="false"></b-loading>
+        <div class="columns is-multiline is-mobile" v-if="latestFivePosts.length > 0">
             <div
                     class="column is-full-desktop is-half-tablet is-full-mobile is-fullheight">
                 <post-item :post="latestFivePosts[0]"/>
@@ -25,6 +25,7 @@
                 <post-item :post="latestFivePosts[4]"/>
             </div>
         </div>
+        <p class="subtitle has-text-centered is-4" v-if="latestFivePosts.length === 0">No posts found.</p>
     </div>
 </template>
 
@@ -36,11 +37,14 @@
         components: {PostItem, PostList},
         data() {
             return {
+                isLoading: true
             }
         },
         computed: {
             latestFivePosts() {
-                return this.$store.getters.getLatestTwoPosts
+                let posts = this.$store.getters.getLatestTwoPosts;
+                this.isLoading = false;
+                return posts
             }
         },
     }
