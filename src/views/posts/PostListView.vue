@@ -1,7 +1,8 @@
 <template>
     <div>
         <blog-page-header title="All Posts" subtitle=""/>
-        <post-list :posts="allPosts"/>
+        <b-loading :is-full-page="true" :active.sync="allPosts.length === 0" :can-cancel="false"></b-loading>
+        <post-list v-if="allPosts.length > 0" :posts="allPosts"/>
     </div>
 </template>
 

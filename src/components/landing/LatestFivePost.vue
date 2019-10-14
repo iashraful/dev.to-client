@@ -1,27 +1,28 @@
 <template>
     <div>
+        <b-loading :is-full-page="true" :active.sync="latestFivePosts.length === 0" :can-cancel="false"></b-loading>
         <div class="columns is-multiline is-mobile">
             <div
                     class="column is-full-desktop is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="firstTwoPosts[1]"/>
+                <post-item :post="latestFivePosts[0]"/>
             </div>
 
             <div
                     class="column is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="firstTwoPosts[0]"/>
+                <post-item :post="latestFivePosts[1]"/>
             </div>
             <div
                     class="column is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="lastThreePosts[0]"/>
+                <post-item :post="latestFivePosts[2]"/>
             </div>
 
             <div
                     class="column is-full-desktop is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="lastThreePosts[1]"/>
+                <post-item :post="latestFivePosts[3]"/>
             </div>
             <div
                     class="column is-full-desktop is-half-tablet is-full-mobile is-fullheight">
-                <post-item :post="lastThreePosts[2]"/>
+                <post-item :post="latestFivePosts[4]"/>
             </div>
         </div>
     </div>
@@ -38,11 +39,8 @@
             }
         },
         computed: {
-            firstTwoPosts() {
+            latestFivePosts() {
                 return this.$store.getters.getLatestTwoPosts
-            },
-            lastThreePosts() {
-                return this.$store.getters.getSecondLatestThreePosts
             }
         },
     }

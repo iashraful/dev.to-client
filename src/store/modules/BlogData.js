@@ -38,11 +38,8 @@ const getters = {
         return state.posts
     },
     getLatestTwoPosts(state) {
-        return state.posts.slice(0, 2)
-    },
-    getSecondLatestThreePosts(state) {
-        return state.posts.slice(2, 5)
-    },
+        return state.posts.slice(0, 5)
+    }
 };
 
 export default {
