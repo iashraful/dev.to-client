@@ -5,6 +5,7 @@ import store from './store/index'
 import './registerServiceWorker'
 import Buefy from 'buefy'
 import VueDisqus from 'vue-disqus'
+
 import 'buefy/dist/buefy.css'
 import './styles/main.scss'
 
