@@ -10,17 +10,18 @@ const state = {
 
 const mutations = {
     updateDev_toPosts(state, posts) {
-        state.posts = posts;
+        state.posts = state.posts.concat(posts);
     }
 };
 
 const actions = {
-    async getAllPosts(context) {
-        await fetch(dev_to.api + 'articles?state=all&username=' + _userConfig.dev__to_username)
+    async getAllPosts(context, page) {
+        return await fetch(dev_to.api + 'articles?&username=' + _userConfig.dev__to_username + '&page=' + page)
             .then((response) => {
                 return response.json()
             }).then((posts) => {
-                context.commit('updateDev_toPosts', posts)
+                context.commit('updateDev_toPosts', posts);
+                return posts
             })
     },
     async getEachPost(context, payload) {
