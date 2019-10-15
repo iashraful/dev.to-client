@@ -8,22 +8,27 @@ import PostDetailsView from "@/views/posts/PostDetailsView";
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: urls.postList,
-      name: 'posts',
-      component: () => import('@/views/posts/PostListView.vue')
-    },
-    {
-      path: urls.postList + '/:slug',
-      name: 'post_details',
-      component: () => import('@/views/posts/PostDetailsView.vue')
-    },
-  ]
+    mode: 'history',
+    routes: [
+        {
+            path: '/index.html',
+            component: Home,
+            alias: '/'
+        },
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
+        {
+            path: urls.postList,
+            name: 'posts',
+            component: () => import('@/views/posts/PostListView.vue')
+        },
+        {
+            path: urls.postList + '/:slug',
+            name: 'post_details',
+            component: () => import('@/views/posts/PostDetailsView.vue')
+        },
+    ]
 })
