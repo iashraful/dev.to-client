@@ -7,6 +7,7 @@
         </figure>
         <vue-markdown>{{ getPostBody(post.body_markdown) }}</vue-markdown>
         <vue-disqus
+                v-if="post.id"
                 class="comments"
                 :title="post.title"
                 :identifier="post.slug"

@@ -1,33 +1,24 @@
 <template>
     <div class="home">
-        <div class="columns">
-            <div class="column is-three-quarters-desktop is-full-tablet is-full-mobile is-fullheight">
-                <latest-five-post/>
-            </div>
-            <div class="column is-one-quarter-desktop is-full-tablet is-full-mobile is-fullheight">
-                <div class="fixed-right">
-                    <div class="has-text-centered">
-                        <a href="https://twitter.com/__ashraful" 
-                            class="twitter-follow-button" data-show-count="false">Follow @__ashraful
-                        </a>
-                    </div>
-                    <div>
-                        <a class="twitter-timeline" 
-                            data-height="800"
-                            href="https://twitter.com/__ashraful">Tweets by Ashraful</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <blog-page-header :title="blogTitle" :subtitle="blogSubtitle"/>
+        <landing/>
     </div>
 </template>
 
 <script>
-    import PostList from "@/components/posts/PostList";
-    import LatestFivePost from "@/components/landing/LatestFivePost";
 
+    import Landing from "@/components/landing/Landing";
+    import BlogPageHeader from "@/components/common/BlogPageHeader";
     export default {
         name: 'home',
-        components: {LatestFivePost, PostList},
+        components: {BlogPageHeader, Landing},
+        computed: {
+            blogTitle() {
+                return this.$store.getters.getUserConfig['blog_title']
+            },
+            blogSubtitle() {
+                return this.$store.getters.getUserConfig['blog_subtitle']
+            }
+        }
     }
 </script>

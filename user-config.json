@@ -1,11 +1,8 @@
 {
   "dev__to_username": "ashraful",
   "twitter_username": "__ashraful",
-  "github_username": "iashraful",
-  "facebook_username": "ashraful.py",
-  "linkedin_username": "~ashraful",
   "disqus_shortname": "blog-ashraful-dev",
 
-  "blog_title": "Life 4 Coding",
-  "blog_meta_data": "Life 4 Coding by Ashraful Islam | Software Engineer"
+  "blog_title": "Ashraful's Blog",
+  "blog_subtitle": "Sharing my thoughts with the world :)"
 }
