@@ -8,7 +8,7 @@
         </template>
         <template slot="start">
             <b-navbar-item tag="div">
-                <b-input placeholder="Search..."/>
+<!--                <b-input placeholder="Search..."/>-->
                 <!-- TODO: Here will be search box for posts-->
             </b-navbar-item>
         </template>
