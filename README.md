@@ -1,13 +1,13 @@
 ## [dev.to](https://dev.to) client [Demo](https://dev-to-client.netlify.com)
 > A dev.to API based client application for blogging
 
-## How to run on local machine?
+## How to run on the local machine?
 * Fork this repository
 * Clone it from your fork
 * Open `user-config.json` file and update according to your blog configuration. i.e:  
 * * "dev__to_username" is you dev.to handle/username/login name.
 * * "twitter_username" is your twitter username
-* * "disqus_shortname" is disqus shorname or discuss comments url prefix.
+* * "disqus_shortname" is Disqus surname or discuss comments URL prefix.
 
 * Run `$ npm install`
 * Run `$ npm run serve`  
@@ -19,12 +19,12 @@
 #### Docker Process
 * RUN `sudo docker build -t iashraful/dev.to-client .`
 * RUN `sudo docker run -it -p 5000:80 --rm --name dev.to-client iashraful/dev.to-client`  
-**You can customize the port if you need. I that case, you must need to allow the post for tcp/ip connection**
+**You can customize the port if you need it. I that case, you just need to allow the port for TCP/IP connection**
 
 #### Traditional Process
 * Run `$ npm install`
 * Run `$ npm run build`
-* Now tell your web server to serve from `dist/` directory.  
+* Now tell your webserver to serve from `dist/` directory.  
 **You must remember to forward every request to `/index.html`. 
 Because this app handles routing with [Vue Router](https://router.vuejs.org/).**  
 
